@@ -1,19 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
     <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fragment_container"/>
+        android:layout_height="match_parent" />
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
         android:layout_alignParentBottom="true">
         <View
             android:layout_width="match_parent"
@@ -32,15 +34,17 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/clickhome"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/clickhome"
+                    android:id="@+id/img_home_home"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="홈"
                     android:textColor="#FDBF40"
-                    android:textSize="15dp"/>
+                    android:textSize="10dp"
+                    android:id="@+id/txt_home_home"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -50,14 +54,16 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/rose"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/rose"
+                    android:id="@+id/img_sue_home"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="법률사례"
-                    android:textSize="15dp"/>
+                    android:textSize="10dp"
+                    android:id="@+id/txt_sue_home"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -67,14 +73,16 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/finder"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/finder"
+                    android:id="@+id/img_find_home"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="찾기"
-                    android:textSize="15dp"/>
+                    android:textSize="10dp"
+                    android:id="@+id/txt_find_home"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -84,15 +92,18 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/sue"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/sue"
+                    android:id="@+id/img_lawer_home"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="변호사"
-                    android:textSize="15dp"/>
+                    android:textSize="10dp"
+                    android:id="@+id/txt_lawer_home"/>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>
+</layout>

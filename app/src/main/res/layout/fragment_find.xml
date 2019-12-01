@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:background="#FDBF40"
         android:gravity="center"
         android:layout_alignParentTop="true"
@@ -14,151 +15,416 @@
             android:layout_height="wrap_content"
             android:text="카테고리를 찾아주세요"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textColor="#FFFFFF"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
         android:layout_below="@+id/find_top"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:background="@drawable/btn_round_stroke_brown">
-      <LinearLayout
-          android:layout_width="wrap_content"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+      <GridLayout
+          android:layout_width="300dp"
           android:layout_height="wrap_content"
+          android:columnCount="3"
           android:orientation="horizontal"
-          android:layout_marginTop="20dp">
+          android:rowCount="6"
+          android:background="@drawable/btn_round_stroke_brown"
+          >
           <LinearLayout
-              android:layout_width="wrap_content"
+              android:layout_width="100dp"
               android:layout_height="wrap_content"
               android:orientation="vertical"
               android:gravity="center"
-              android:layout_marginRight="40dp"
-              android:id="@+id/btn_home_find">
+              android:id="@+id/btn_home_find"
+              android:layout_column="0"
+              android:layout_marginTop="10dp"
+              android:layout_rowSpan="0"
+              android:layout_gravity="fill_horizontal">
               <ImageView
-                  android:layout_width="60dp"
-                  android:layout_height="60dp"
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
                   android:src="@drawable/blackhome"/>
               <TextView
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:text="가정법률"
-                  android:textSize="16dp"
-                  android:textStyle="bold"
-                  android:layout_marginTop="10dp"/>
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
           </LinearLayout>
           <LinearLayout
-              android:layout_width="wrap_content"
+              android:layout_width="100dp"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:layout_marginRight="40dp"
-              android:gravity="center_horizontal"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_column="1"
+              android:layout_rowSpan="0"
+              android:layout_gravity="fill_horizontal"
               android:id="@+id/btn_school_find">
               <ImageView
-                  android:layout_width="60dp"
-                  android:layout_height="60dp"
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
                   android:src="@drawable/school"/>
               <TextView
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:text="아동/청소년교육"
-                  android:textSize="16dp"
-                  android:textStyle="bold"
-                  android:layout_marginTop="10dp"/>
+
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
           </LinearLayout>
+
           <LinearLayout
-              android:layout_width="wrap_content"
+              android:id="@+id/btn_building_find"
+              android:layout_width="100dp"
               android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:gravity="center_horizontal"
-              android:id="@+id/btn_build_find">
+              android:layout_row="0"
+              android:layout_column="2"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:orientation="vertical">
+
               <ImageView
-                  android:layout_width="60dp"
-                  android:layout_height="60dp"
-                  android:src="@drawable/building"/>
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/building" />
+
               <TextView
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
+                  android:layout_marginTop="7dp"
                   android:text="부동산/임대차"
-                  android:textSize="16dp"
-                  android:textStyle="bold"
-                  android:layout_marginTop="10dp"/>
+                  android:textSize="13dp" />
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_column="0"
+              android:layout_row="1"
+              android:layout_marginTop="10dp"
+              android:layout_gravity="fill_horizontal"
+              android:id="@+id/btn_coin_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/coin"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="금융/금전"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_row="1"
+              android:layout_column="1"
+              android:layout_gravity="center"
+              android:id="@+id/btn_business_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/bag"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="사업"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_column="2"
+              android:layout_row="1"
+              android:id="@+id/btn_founded_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/shop"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="창업"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_row="2"
+              android:layout_marginTop="10dp"
+              android:layout_column="0"
+              android:id="@+id/btn_trade_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/world"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="무역/출입국"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_row="2"
+              android:layout_column="1"
+              android:id="@+id/btn_consumer_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/shoppingcart"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="소비자"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
           </LinearLayout>
 
-      </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginRight="60dp"
-            android:id="@+id/btn_coin_find">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/coin"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="금융/금전"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginRight="60dp"
-            android:id="@+id/btn_business_find">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/bag"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="사업"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:id="@+id/btn_founded_find">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/shop"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="창업"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-    </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_row="2"
+              android:layout_column="2"
+              android:id="@+id/btn_movie_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/movie"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="문화/여가생활"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_row="3"
+              android:layout_column="0"
+              android:id="@+id/btn_sue_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/hammer"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="민형사/소송"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_row="3"
+              android:layout_column="1"
+              android:id="@+id/btn_car_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/car"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="교통/운전"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_row="3"
+              android:layout_column="2"
+              android:id="@+id/btn_fix_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/fix"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="근로/노동"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_row="4"
+              android:layout_column="0"
+              android:layout_marginTop="10dp"
+              android:id="@+id/btn_walfare_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/walfare"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="복지"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_row="4"
+              android:layout_column="1"
+              android:id="@+id/btn_safe_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/safehat"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="국방/보훈"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_row="4"
+              android:layout_column="2"
+              android:layout_marginTop="10dp"
+              android:id="@+id/btn_computer_find">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/monitor"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="정보통신/기술"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_row="5"
+              android:layout_marginTop="10dp"
+              android:layout_column="0"
+              android:id="@+id/btn_energy_find"
 
+              android:layout_marginBottom="10dp">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/bulb"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="환경/에너지"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_row="5"
+              android:layout_marginTop="10dp"
+              android:layout_column="1"
+              android:id="@+id/btn_shild_find"
 
+              android:layout_marginBottom="10dp">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/shild"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="사회범죄/안전"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"
+                  />
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_row="5"
+              android:layout_column="2"
+              android:layout_marginTop="10dp"
+              android:id="@+id/btn_nation_find"
 
+              android:layout_marginBottom="10dp">
+              <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:src="@drawable/taegk"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="국가 지자체"
+                  android:layout_marginTop="7dp"
+                  android:textSize="13dp"/>
+
+          </LinearLayout>
+             </GridLayout>
+
+        </ScrollView>
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="65dp"
         android:src="@drawable/mike"
         android:id="@+id/floating_btn_find"
         android:backgroundTint="#FDBF40"
@@ -167,3 +433,4 @@
         />
 
 </RelativeLayout>
+</layout>
